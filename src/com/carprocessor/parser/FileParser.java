@@ -1,4 +1,4 @@
-package com.carprocessor;
+package com.carprocessor.parser;
 
 import com.carprocessor.model.Car;
 
