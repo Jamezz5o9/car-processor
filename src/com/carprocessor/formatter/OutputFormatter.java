@@ -1,4 +1,9 @@
 package com.carprocessor.formatter;
 
-public class OutputFormatter {
+import com.carprocessor.model.Car;
+
+import java.util.List;
+
+public interface OutputFormatter {
+    String format(List<Car> cars);
 }
