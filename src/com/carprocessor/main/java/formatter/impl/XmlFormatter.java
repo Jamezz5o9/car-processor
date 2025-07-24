@@ -1,8 +1,7 @@
-package com.carprocessor.formatter.impl;
+package com.carprocessor.main.java.formatter.impl;
 
-import com.carprocessor.formatter.OutputFormatter;
-import com.carprocessor.model.Car;
-
+import com.carprocessor.main.java.formatter.OutputFormatter;
+import com.carprocessor.main.java.model.Car;
 import java.util.List;
 import java.util.Map;
 
@@ -11,22 +10,17 @@ public class XmlFormatter implements OutputFormatter {
     @Override
     public String format(List<Car> cars) {
         StringBuilder sb = new StringBuilder();
-        sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-        sb.append("<cars>\n");
+        sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<cars>\n");
 
         for (Car car : cars) {
             sb.append("  <car");
-            if (car.getBrand() != null) {
-                sb.append(" brand=\"").append(car.getBrand()).append("\"");
-            }
+            if (car.getBrand() != null) sb.append(" brand=\"").append(car.getBrand()).append("\"");
             sb.append(">\n");
 
             appendElement(sb, "type", car.getType());
             appendElement(sb, "model", car.getModel());
 
-            sb.append("    <price currency=\"USD\">")
-                    .append(String.format("%.2f", car.getPriceUSD()))
-                    .append("</price>\n");
+            sb.append("    <price currency=\"USD\">").append(String.format("%.2f", car.getPriceUSD())).append("</price>\n");
 
             if (!car.getPrices().isEmpty()) {
                 sb.append("    <prices>\n");
@@ -38,10 +32,7 @@ public class XmlFormatter implements OutputFormatter {
                 sb.append("    </prices>\n");
             }
 
-            if (car.getReleaseDate() != null) {
-                appendElement(sb, "releaseDate", car.getReleaseDate().toString());
-            }
-
+            if (car.getReleaseDate() != null) appendElement(sb, "releaseDate", car.getReleaseDate().toString());
             sb.append("  </car>\n");
         }
 
@@ -50,11 +41,6 @@ public class XmlFormatter implements OutputFormatter {
     }
 
     private void appendElement(StringBuilder sb, String tag, String value) {
-        if (value != null) {
-            sb.append(" ".repeat(4))
-                    .append("<").append(tag).append(">")
-                    .append(value)
-                    .append("</").append(tag).append(">\n");
-        }
+        if (value != null) sb.append("    <").append(tag).append(">").append(value).append("</").append(tag).append(">\n");
     }
 }

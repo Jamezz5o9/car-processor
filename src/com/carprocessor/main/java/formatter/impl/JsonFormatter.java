@@ -1,12 +1,10 @@
-package com.carprocessor.formatter.impl;
+package com.carprocessor.main.java.formatter.impl;
 
-
-import com.carprocessor.formatter.OutputFormatter;
-import com.carprocessor.model.Car;
+import com.carprocessor.main.java.formatter.OutputFormatter;
+import com.carprocessor.main.java.model.Car;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +24,6 @@ public class JsonFormatter implements OutputFormatter {
         try {
             Map<String, List<Car>> result = new HashMap<>();
             result.put("cars", cars);
-
             return objectMapper.writeValueAsString(result);
         } catch (Exception e) {
             return manualFormat(cars);
@@ -40,35 +37,16 @@ public class JsonFormatter implements OutputFormatter {
         for (int i = 0; i < cars.size(); i++) {
             Car car = cars.get(i);
             sb.append("    {\n");
-
-            if (car.getBrand() != null) {
-                sb.append("      \"brand\": \"").append(car.getBrand()).append("\",\n");
-            }
-
-            if (car.getType() != null) {
-                sb.append("      \"type\": \"").append(car.getType()).append("\",\n");
-            }
-
-            if (car.getModel() != null) {
-                sb.append("      \"model\": \"").append(car.getModel()).append("\",\n");
-            }
-
+            if (car.getBrand() != null) sb.append("      \"brand\": \"").append(car.getBrand()).append("\",\n");
+            if (car.getType() != null) sb.append("      \"type\": \"").append(car.getType()).append("\",\n");
+            if (car.getModel() != null) sb.append("      \"model\": \"").append(car.getModel()).append("\",\n");
             sb.append("      \"priceUSD\": ").append(car.getPriceUSD()).append(",\n");
-
-            if (car.getReleaseDate() != null) {
-                sb.append("      \"releaseDate\": \"")
-                        .append(car.getReleaseDate()).append("\"\n");
-            }
-
+            if (car.getReleaseDate() != null) sb.append("      \"releaseDate\": \"").append(car.getReleaseDate()).append("\"\n");
             sb.append("    }");
-            if (i < cars.size() - 1) {
-                sb.append(",");
-            }
+            if (i < cars.size() - 1) sb.append(",");
             sb.append("\n");
         }
-
         sb.append("  ]\n}");
         return sb.toString();
     }
 }
-

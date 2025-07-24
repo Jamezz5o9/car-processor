@@ -1,6 +1,6 @@
-package com.carprocessor.formatter;
+package com.carprocessor.main.java.formatter;
 
-import com.carprocessor.model.Car;
+import com.carprocessor.main.java.model.Car;
 
 import java.util.List;
 
