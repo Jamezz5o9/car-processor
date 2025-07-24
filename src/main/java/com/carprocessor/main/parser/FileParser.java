@@ -1,6 +1,6 @@
-package com.carprocessor.main.java.parser;
+package com.carprocessor.main.parser;
 
-import com.carprocessor.main.java.model.Car;
+import com.carprocessor.main.model.Car;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package com.carprocessor.main.java;
+package com.carprocessor.main;
 
-import com.carprocessor.main.java.model.Car;
-import com.carprocessor.main.java.service.CarProcessorService;
+import com.carprocessor.main.model.Car;
+import com.carprocessor.main.service.CarProcessorService;
 
 import java.util.List;
 import java.util.Scanner;

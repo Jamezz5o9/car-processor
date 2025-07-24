@@ -1,6 +1,6 @@
-package com.carprocessor.main.java;
+package com.carprocessor.main;
 
-import com.carprocessor.main.java.service.CarProcessorService;
+import com.carprocessor.main.service.CarProcessorService;
 
 public class CarProcessorApplication {
     public static void main(String[] args) {

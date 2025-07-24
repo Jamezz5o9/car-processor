@@ -1,7 +1,7 @@
-package com.carprocessor.main.java.parser.impl;
+package com.carprocessor.main.parser.impl;
 
-import com.carprocessor.main.java.model.Car;
-import com.carprocessor.main.java.parser.FileParser;
+import com.carprocessor.main.model.Car;
+import com.carprocessor.main.parser.FileParser;
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import java.io.File;
@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.carprocessor.main.java.utils.Constant.UNKNOWN;
+import static com.carprocessor.main.utils.Constant.UNKNOWN;
 
 public class XmlParser implements FileParser {
 

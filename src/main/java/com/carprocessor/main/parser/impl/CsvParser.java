@@ -1,7 +1,7 @@
-package com.carprocessor.main.java.parser.impl;
+package com.carprocessor.main.parser.impl;
 
-import com.carprocessor.main.java.model.Car;
-import com.carprocessor.main.java.parser.FileParser;
+import com.carprocessor.main.model.Car;
+import com.carprocessor.main.parser.FileParser;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.time.LocalDate;
@@ -9,8 +9,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.carprocessor.main.java.utils.Constant.DATE_FORMAT;
-import static com.carprocessor.main.java.utils.Constant.UNKNOWN;
+import static com.carprocessor.main.utils.Constant.DATE_FORMAT;
+import static com.carprocessor.main.utils.Constant.UNKNOWN;
 
 public class CsvParser implements FileParser {
 

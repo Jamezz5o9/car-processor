@@ -1,7 +1,7 @@
-package com.carprocessor.main.java.formatter.impl;
+package com.carprocessor.main.formatter.impl;
 
-import com.carprocessor.main.java.formatter.OutputFormatter;
-import com.carprocessor.main.java.model.Car;
+import com.carprocessor.main.formatter.OutputFormatter;
+import com.carprocessor.main.model.Car;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

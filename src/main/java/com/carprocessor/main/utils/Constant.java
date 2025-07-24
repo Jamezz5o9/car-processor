@@ -1,4 +1,4 @@
-package com.carprocessor.main.java.utils;
+package com.carprocessor.main.utils;
 
 public interface Constant {
     String USD = "USD";

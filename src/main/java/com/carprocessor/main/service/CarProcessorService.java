@@ -1,12 +1,12 @@
-package com.carprocessor.main.java.service;
+package com.carprocessor.main.service;
 
-import com.carprocessor.main.java.formatter.impl.JsonFormatter;
-import com.carprocessor.main.java.formatter.impl.TableFormatter;
-import com.carprocessor.main.java.formatter.impl.XmlFormatter;
-import com.carprocessor.main.java.model.Car;
-import com.carprocessor.main.java.formatter.OutputFormatter;
-import com.carprocessor.main.java.parser.impl.CsvParser;
-import com.carprocessor.main.java.parser.impl.XmlParser;
+import com.carprocessor.main.formatter.impl.JsonFormatter;
+import com.carprocessor.main.formatter.impl.TableFormatter;
+import com.carprocessor.main.formatter.impl.XmlFormatter;
+import com.carprocessor.main.model.Car;
+import com.carprocessor.main.formatter.OutputFormatter;
+import com.carprocessor.main.parser.impl.CsvParser;
+import com.carprocessor.main.parser.impl.XmlParser;
 
 import java.io.File;
 import java.io.InputStream;
@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.carprocessor.main.java.utils.Constant.EUR;
-import static com.carprocessor.main.java.utils.Constant.JPY;
+import static com.carprocessor.main.utils.Constant.EUR;
+import static com.carprocessor.main.utils.Constant.JPY;
 
 public class CarProcessorService {
 

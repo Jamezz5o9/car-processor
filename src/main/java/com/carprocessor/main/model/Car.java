@@ -1,10 +1,10 @@
-package com.carprocessor.main.java.model;
+package com.carprocessor.main.model;
 
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.carprocessor.main.java.utils.Constant.USD;
+import static com.carprocessor.main.utils.Constant.USD;
 
 public class Car {
     private String brand;
